@@ -1,0 +1,73 @@
+<div style="padding-top: 30px;">
+  <div fxLayout="row" style="margin: 10px;">
+    <mat-icon style="color: #1A237E">people</mat-icon>
+    <mat-label style="color: #1A237E">Choose number of </mat-label>
+    <br>
+    <mat-label style="font-weight: bold; padding-right: 1.8em; color: #1A237E">people</mat-label>
+  </div>
+  <div style="width: 100%">
+    <mat-card class="sheet">
+      <div fxLayout="row" style="width: 100%">
+        <div style="float: left;margin-right:auto" fxLayout="row">
+          <mat-icon class="maticonstyle">local_hotel</mat-icon>
+          <mat-label class="matlabelstyle" style="color: #1A237E">Rooms</mat-label>
+        </div>
+        <div fxLayout="row">
+          <mat-icon style="color: #1A237E" class="maticonstyle" (click)="roomRem()">remove_circle</mat-icon>
+          <mat-label class="matlabelstyle">{{roomNo}}</mat-label>
+          <mat-icon style="color: palevioletred" class="maticonstyle" (click)="roomAdd()">add_circle</mat-icon>
+        </div>
+      </div>
+      <hr style="color: #1A237E; padding-left: 5px;padding-right: 5px">
+      <div fxLayout="row">
+        <div style="float: left;margin-right:auto" fxLayout="row">
+          <mat-icon class="maticonstyle">person</mat-icon>
+          <mat-label class="matlabelstyle" style="color: #1A237E">Adults</mat-label>
+        </div>
+        <div fxLayout="row">
+          <mat-icon style="color: #1A237E" class="maticonstyle" (click)="adultRemove()">remove_circle</mat-icon>
+          <mat-label class="matlabelstyle">{{adultNo}}</mat-label>
+          <mat-icon style="color: palevioletred" class="maticonstyle" (click)="adultAdd()">add_circle</mat-icon>
+        </div>
+      </div>
+      <hr style="color: #1A237E; padding-left: 5px;padding-right: 5px">
+      <div fxLayout="row">
+        <div style="float: left;margin-right:auto" fxLayout="row">
+          <mat-icon class="maticonstyle">accessibility_new</mat-icon>
+          <mat-label class="matlabelstyle" style="color: #1A237E">Children</mat-label>
+        </div>
+        <div fxLayout="row">
+          <mat-icon style="color: #1A237E" class="maticonstyle" (click)="childRem()">remove_circle</mat-icon>
+          <mat-label class="matlabelstyle">{{childNo}}</mat-label>
+          <mat-icon style="color: palevioletred" class="maticonstyle" (click)="childAdd()">add_circle</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div style="padding:  20px">
+
+    <table style="width:100%">
+      <tr>
+        <th></th>
+        <th>Current</th>
+        <!-- <th>Room + Clicked</th> -->
+      </tr>
+      <tr>
+        <td>Rooms</td>
+        <td>{{roomNo}}</td>
+        <!-- <td>{{roomCount}}</td> -->
+      </tr>
+      <tr>
+        <td>Adult</td>
+        <td>{{adultNo}}</td>
+        <!-- <td>{{adultCount}}</td> -->
+      </tr>
+      <tr>
+        <td>Children</td>
+        <td>{{childNo}}</td>
+        <!-- <td>{{childCount}}</td> -->
+      </tr>
+    </table>
+
+  </div>
+</div>
